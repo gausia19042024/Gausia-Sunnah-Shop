@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gausia Sunnah Shop - গাউসিয়া সুন্নাহ শপ</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #f2f3f5;
+            --bg-card: #ffffff;
+            --theme-dark: #1f2226;
+            --theme-dark-soft: #2a2e35;
+            --accent-gold: #c5a059;
+            --text-dark: #1a1c1e;
+            --text-muted: #626773;
+            --border-color: #dcdfe4;
+            --shadow: 0 4px 15px rgba(0,0,0,0.06);
+            --radius: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding-bottom: 60px;
+            transition: background 0.3s ease;
+        }
+
+        /* Bismillah Top Bar */
+        .top-notice {
+            background-color: var(--theme-dark);
+            color: #ffffff;
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 14px;
+            border-bottom: 2px solid var(--accent-gold);
+            transition: background 0.3s ease;
+        }
+
+        .arabic-bismillah {
+            font-family: 'Amiri', serif;
+            font-size: 18px;
+            color: var(--accent-gold);
+            margin-bottom: 2px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--theme-dark) 0%, var(--theme-dark-soft) 100%);
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: background 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-circle {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px dashed var(--accent-gold);
+            padding: 3px;
+            background: white;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .shop-title {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            color: #ffffff;
+        }
+
+        .shop-tagline {
+            font-size: 14px;
+            color: #d0d4dc;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .header-contacts {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 5px;
+            font-size: 13px;
+        }
+
+        .contact-badge {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #f0f0f0;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* Banner Card */
+        .shop-card-info {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 18px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--theme-dark);
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        .card-info-text h3 {
+            font-size: 16px;
+            color: var(--theme-dark);
+            margin-bottom: 4px;
+        }
+
+        .card-info-text p {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--theme-dark);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            background: var(--accent-gold);
+        }
+
+        /* Section Title */
+        .section-header {
+            text-align: center;
+            margin: 30px 0 20px;
+            position: relative;
+        }
+
+        .section-header h2 {
+            font-size: 22px;
+            color: var(--theme-dark);
+            display: inline-block;
+            background: var(--bg-main);
+            padding: 0 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background: var(--border-color);
+            z-index: 0;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eaeaea;
+        }
+
+        .product-details {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--theme-dark);
+            margin-bottom: 6px;
+        }
+
+        .product-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            flex-grow: 1;
+        }
+
+        .price-box {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .current-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--theme-dark);
+        }
+
+        .old-price {
+            font-size: 13px;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .order-btn {
+            background: var(--theme-dark);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: 0.2s;
+        }
+
+        .order-btn:hover {
+            background: var(--theme-dark-soft);
+            opacity: 0.9;
+        }
+
+        /* Order Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: var(--radius);
+            max-width: 500px;
+            width: 100%;
+            padding: 22px;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--theme-dark);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 14px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--theme-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--theme-dark);
+        }
+
+        .payment-instructions {
+            background: #f8f9fa;
+            border: 1px dashed var(--theme-dark);
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .trx-input-group {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .confirm-order-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .confirm-order-btn:hover {
+            background: #218838;
+        }
+
+        .wa-order-btn {
+            background: #25D366;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        /* Toast Message */
+        .toast-msg {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 2000;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Admin Trigger & Panel */
+        .admin-trigger {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .admin-btn {
+            background: transparent;
+            border: 1px solid var(--theme-dark);
+            color: var(--theme-dark);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .admin-panel {
+            display: none;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .admin-tab-btns {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 8px 14px;
+            border: none;
+            background: #eee;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .tab-btn.active {
+            background: var(--theme-dark);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .admin-product-item, .order-card-item {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px solid var(--border-color);
+            font-size: 13px;
+        }
+
+        .order-card-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 6px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .status-badge {
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            color: white;
+        }
+
+        .status-pending { background: #ffc107; color: #333; }
+        .status-completed { background: #28a745; }
+        .status-cancelled { background: #dc3545; }
+
+        .color-picker-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .color-picker-group input[type="color"] {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .img-preview-box {
+            width: 100px;
+            height: 100px;
+            border: 1px dashed var(--border-color);
+            border-radius: 6px;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #fafafa;
+        }
+
+        .img-preview-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 13px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 600px) {
+            .shop-title { font-size: 22px; }
+            .shop-card-info { flex-direction: column; text-align: center; }
+            .product-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+            .product-img { height: 150px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bismillah Notice Bar -->
+    <div class="top-notice">
+        <div class="arabic-bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+        <div id="displayTopNotice">গাউসিয়া সুন্নাহ শপে আপনাকে স্বাগতম! সেরা সুন্নাহ পণ্য এখানে পাবেন।</div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo-circle">
+                <img id="displayLogo" src="https://i.ibb.co/L530Brm/gausia-logo.png" alt="Logo" onerror="this.src='https://via.placeholder.com/150/1f2226/ffffff?text=Logo'">
+            </div>
+            <h1 class="shop-title" id="displayShopName">Gausia Sunnah Shop</h1>
+            <p class="shop-tagline" id="displayShopTagline">THE PERFECT TOUCH OF ELEGANCE, THE BEST SUNNAH PRODUCTS</p>
+            <div class="header-contacts">
+                <a href="#" class="contact-badge"><i class="fas fa-user"></i> <span id="displayProprietor">Md Sultanul Arfin</span></a>
+                <a href="#" class="contact-badge" id="phoneLink"><i class="fas fa-phone"></i> <span id="displayPhone">01671-538411</span></a>
+                <a href="#" class="contact-badge"><i class="fas fa-map-marker-alt"></i> <span id="displayAddress">Panishwar Uttar Bazar, Sarail, Brahmanbaria</span></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Info / Social Card -->
+        <div class="shop-card-info">
+            <div class="card-info-text">
+                <h3 id="displayBannerTitle">গাউসিয়া সুন্নাহ শপ — অনলাইন অর্ডার সেন্টার</h3>
+                <p id="displayBannerDesc">সরাসরি অর্ডার করতে নিচে পণ্য সিলেক্ট করুন। সাইটের ভিতরেই অর্ডার কনফার্ম করতে পারবেন।</p>
+            </div>
+            <div class="social-links">
+                <a href="#" id="displayFbLink" target="_blank" class="social-btn" title="Facebook Page"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" id="displayTiktokLink" target="_blank" class="social-btn" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" id="displayWaLink" target="_blank" class="social-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Section Title -->
+        <div class="section-header">
+            <h2>আমাদের পণ্যসমূহ</h2>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="productGrid">
+            <!-- Products loaded via JavaScript -->
+        </div>
+
+        <!-- Admin Access Button -->
+        <div class="admin-trigger">
+            <button class="admin-btn" onclick="openAdminModal()"><i class="fas fa-lock"></i> এডমিন প্যানেল (Admin Panel)</button>
+        </div>
+
+        <!-- Admin Login Modal -->
+        <div class="modal" id="adminLoginModal">
+            <div class="modal-content" style="max-width:380px;">
+                <span class="close-modal" onclick="closeAdminLoginModal()">&times;</span>
+                <div class="modal-title"><i class="fas fa-user-shield"></i> এডমিন লগইন</div>
+                <form onsubmit="handleAdminLogin(event)">
+                    <div class="form-group">
+                        <label>পাসওয়ার্ড দিন:</label>
+                        <input type="password" id="adminPassInput" class="form-control" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="order-btn" style="background:var(--theme-dark);">
+                        <i class="fas fa-key"></i> লগইন করুন
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Admin Panel Section -->
+        <div class="admin-panel" id="adminPanel">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+                <h3><i class="fas fa-cog"></i> এডমিন কন্ট্রোল প্যানেল</h3>
+                <button onclick="closeAdminPanel()" style="background:#cc0000; color:white; border:none; padding:4px 10px; border-radius:4px; cursor:pointer;">বন্ধ করুন</button>
+            </div>
+
+            <div class="admin-tab-btns">
+                <button class="tab-btn active" onclick="switchTab('manage-orders')">অর্ডার তালিকা (<span id="orderCountBadge">0</span>)</button>
+                <button class="tab-btn" onclick="switchTab('manage-products')">পণ্য যোগ/তালিকা</button>
+                <button class="tab-btn" onclick="switchTab('manage-site')">থিম, তথ্য ও পাসওয়ার্ড</button>
+            </div>
+
+            <!-- Manage Orders Tab -->
+            <div id="manage-orders" class="tab-content active">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h4>গ্রাহকদের অর্ডারসমূহ:</h4>
+                    <button onclick="clearAllOrders()" style="background:#dc3545; color:white; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">সব অর্ডার মুছুন</button>
+                </div>
+                <div id="adminOrdersList">
+                    <!-- Orders dynamically rendered here -->
+                </div>
+            </div>
+
+            <!-- Manage Products Tab -->
+            <div id="manage-products" class="tab-content">
+                <h4 style="margin-bottom:10px;" id="formTitleText">নতুন পণ্য যোগ করুন:</h4>
+                <form id="addProductForm" onsubmit="handleSaveProduct(event)">
+                    <input type="hidden" id="editProductId">
+                    <input type="hidden" id="pImgBase64">
+                    <div class="form-group">
+                        <label>পণ্যের নাম:</label>
+                        <input type="text" id="pName" class="form-control" required>
+                    </div>
+                    
+                    <!-- Directly Upload Image File from Desktop/Phone Storage -->
+                    <div class="form-group">
+                        <label><i class="fas fa-upload"></i> পিসি/মেমোরি থেকে ছবি আপলোড করুন:</label>
+                        <input type="file" id="pImgFile" class="form-control" accept="image/*" onchange="previewProductImage(event)">
+                        <div style="font-size:11px; color:#666; margin-top:3px;">অথবা অনলাইন লিংক (URL) দিন:</div>
+                        <input type="text" id="pImgUrl" class="form-control" placeholder="https://..." style="margin-top:3px;">
+                        <div class="img-preview-box" id="imgPreviewContainer">
+                            <span style="font-size:11px; color:#aaa;">ছবি প্রিভিউ</span>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; gap:10px;">
+                        <div class="form-group" style="flex:1;">
+                            <label>মূল্য (টাকা):</label>
+                            <input type="number" id="pPrice" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="flex:1;">
+                            <label>পূর্বের মূল্য (ঐচ্ছিক):</label>
+                            <input type="number" id="pOldPrice" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>সংক্ষিপ্ত বিবরণ:</label>
+                        <textarea id="pDesc" class="form-control" rows="2"></textarea>
+                    </div>
+                    <div style="display:flex; gap:10px;">
+                        <button type="submit" class="order-btn" style="background:#28a745; flex:1;"><i class="fas fa-save"></i> সংরক্ষণ করুন</button>
+                        <button type="button" id="cancelEditBtn" onclick="resetProductForm()" class="order-btn" style="background:#6c757d; flex:1; display:none;">বাতিল করুন</button>
+                    </div>
+                </form>
+
+                <hr style="margin:20px 0; border:0; border-top:1px solid var(--border-color);">
+                <h4>বিদ্যমান পণ্যসমূহ:</h4>
+                <div id="adminProductList" style="margin-top:10px; max-height:250px; overflow-y:auto;">
+                    <!-- Loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Manage Site Info & Theme Tab -->
+            <div id="manage-site" class="tab-content">
+                <h4 style="margin-bottom:12px;">এডমিন পাসওয়ার্ড পরিবর্তন করুন:</h4>
+                <div class="form-group">
+                    <label>নতুন পাসওয়ার্ড সেটিং:</label>
+                    <input type="password" id="editAdminPass" class="form-control" placeholder="নতুন এডমিন পাসওয়ার্ড দিন">
+                </div>
+
+                <hr style="margin:15px 0; border:0; border-top:1px solid var(--border-color);">
+
+                <h4 style="margin-bottom:12px;">ওয়েবসাইটের থিম রঙ পরিবর্তন করুন:</h4>
+                <form onsubmit="handleSaveTheme(event)">
+                    <div class="color-picker-group">
+                        <div>
+                            <label style="font-size:12px; font-weight:bold; display:block;">প্রধান থিম কালার:</label>
+                            <input type="color" id="themeDarkColor" value="#1f2226">
+                        </div>
+                        <div>
+                            <label style="font-size:12px; font-weight:bold; display:block;">গোল্ড/অ্যাক্সেন্ট কালার:</label>
+                            <input type="color" id="accentGoldColor" value="#c5a059">
+                        </div>
+                        <div>
+                            <label style="font-size:12px; font-weight:bold; display:block;">ব্যাকগ্রাউন্ড কালার:</label>
+                            <input type="color" id="bgMainColor" value="#f2f3f5">
+                        </div>
+                    </div>
+
+                    <h4 style="margin:15px 0 10px;">ওয়েবসাইটের তথ্য ও লোগো পরিবর্তন করুন:</h4>
+                    <div class="form-group">
+                        <label>দোকানের নাম:</label>
+                        <input type="text" id="editShopName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>লোগো ছবি আপলোড (বা URL লিংক):</label>
+                        <input type="file" id="editLogoFile" class="form-control" accept="image/*" onchange="previewLogoImage(event)">
+                        <input type="text" id="editLogoUrl" class="form-control" placeholder="https://..." style="margin-top:4px;">
+                    </div>
+                    <div class="form-group">
+                        <label>ট্যাগলাইন বা স্লোগান:</label>
+                        <input type="text" id="editShopTagline" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>উপরের নোটিশ / বিসমিল্লাহ বার টেক্সট:</label>
+                        <input type="text" id="editTopNotice" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>প্রোপ্রাইটর নাম:</label>
+                        <input type="text" id="editProprietor" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ফোন / বিকাশ / নগদ নম্বর:</label>
+                        <input type="text" id="editPhone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ঠিকানা:</label>
+                        <input type="text" id="editAddress" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ফেসবুক পেজ লিংক:</label>
+                        <input type="text" id="editFbLink" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>টিকটক লিংক:</label>
+                        <input type="text" id="editTiktokLink" class="form-control">
+                    </div>
+                    <button type="submit" class="order-btn" style="background:#007bff;"><i class="fas fa-sync"></i> তথ্য, থিম ও পাসওয়ার্ড সেভ করুন</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Modal -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeOrderModal()">&times;</span>
+            <div class="modal-title"><i class="fas fa-shopping-bag"></i> অর্ডার ফর্ম</div>
+            <form id="orderForm" onsubmit="submitOrder(event)">
+                <input type="hidden" id="modalProductName">
+                <input type="hidden" id="modalProductPrice">
+                <div style="background:#f8f9fa; padding:10px; border-radius:6px; margin-bottom:15px; font-size:14px;">
+                    <div><strong>পণ্য:</strong> <span id="displayModalPName"></span></div>
+                    <div><strong>মূল্য:</strong> <span id="displayModalPPrice"></span> টাকা</div>
+                </div>
+                <div class="form-group">
+                    <label>আপনার নাম *</label>
+                    <input type="text" id="custName" class="form-control" placeholder="আপনার নাম লিখুন" required>
+                </div>
+                <div class="form-group">
+                    <label>মোবাইল নম্বর *</label>
+                    <input type="tel" id="custPhone" class="form-control" placeholder="০১৭XXXXXXXX" required>
+                </div>
+                <div class="form-group">
+                    <label>পূর্ণাঙ্গ ঠিকানা (গ্রাম/থানা/জেলা) *</label>
+                    <textarea id="custAddress" class="form-control" rows="2" placeholder="আপনার ডেলিভারি ঠিকানা লিখুন" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>পেমেন্ট পদ্ধতি বেছে নিন *</label>
+                    <select id="paymentMethod" class="form-control" onchange="togglePaymentInstructions()" required>
+                        <option value="Cash on Delivery">ক্যাশ অন ডেলিভারি (পণ্য পেয়ে টাকা দিন)</option>
+                        <option value="bKash/Nagad">বিকাশ / নগদ (অগ্রিম পেমেন্ট)</option>
+                    </select>
+                </div>
+                <div class="payment-instructions" id="paymentDetails" style="display:none;">
+                    <p><strong>পেমেন্ট নির্দেশনা:</strong></p>
+                    <p>আমাদের বিকাশ/নগদ নম্বর: <strong id="modalPayNumber">01671538411</strong>-এ সেন্ড মানি করুন। এরপর ট্রানজেকশন আইডি দিন।</p>
+                    <div class="trx-input-group" id="trxGroup" style="display:block;">
+                        <input type="text" id="custTrx" class="form-control" placeholder="Transaction ID (TrxID) লিখুন">
+                    </div>
+                </div>
+                
+                <button type="submit" class="confirm-order-btn">
+                    <i class="fas fa-check-circle"></i> সরাসরি ওয়েবসাইটেই অর্ডার নিশ্চিত করুন
+                </button>
+
+                <button type="button" class="wa-order-btn" onclick="submitOrderWhatsApp()">
+                    <i class="fab fa-whatsapp" style="font-size:18px;"></i> WhatsApp-এ অর্ডার পাঠাতে চাইলে ক্লিক করুন
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast-msg">
+        <i class="fas fa-check-circle"></i> আপনার অর্ডারটি সফলভাবে জমা নেওয়া হয়েছে!
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> <strong id="footerShopName">Gausia Sunnah Shop</strong>. All rights reserved.</p>
+        <p style="font-size:11px; margin-top:4px;" id="footerAddress">গাউসিয়া সুন্নাহ শপ — পানিশ্বর উত্তর বাজার, সরাইল, ব্রাহ্মণবাড়িয়া।</p>
+    </footer>
+
+    <!-- JavaScript Script -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Default Configuration
+        const defaultSiteInfo = {
+            shopName: "Gausia Sunnah Shop",
+            shopTagline: "THE PERFECT TOUCH OF ELEGANCE, THE BEST SUNNAH PRODUCTS",
+            topNotice: "গাউসিয়া সুন্নাহ শপে আপনাকে স্বাগতম! সেরা সুন্নাহ পণ্য এখানে পাবেন।",
+            proprietor: "Md Sultanul Arfin",
+            phone: "01671-538411",
+            address: "Panishwar Uttar Bazar, Sarail, Brahmanbaria",
+            logoUrl: "https://i.ibb.co/L530Brm/gausia-logo.png",
+            fbLink: "https://facebook.com",
+            tiktokLink: "https://tiktok.com",
+            adminPass: "1234",
+            themeDark: "#1f2226",
+            accentGold: "#c5a059",
+            bgMain: "#f2f3f5"
+        };
+
+        const defaultProducts = [
+            { id: 1, name: "ডিউস সাভাজ (Deuce Savage) প্রিমিয়াম আতর", price: 350, oldPrice: 450, image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=400&q=80", desc: "লং লাস্টিং সুগন্ধি প্রিমিয়াম ইম্পোর্টেড পারফিউম অয়েল।" },
+            { id: 2, name: "অর্গানিক স্পেশাল মেহেদি", price: 120, oldPrice: 150, image: "https://images.unsplash.com/photo-1563178406-4cdc2923acbc?auto=format&fit=crop&w=400&q=80", desc: "১০০% অর্গানিক ও গাঢ় কালার প্রদানকারী প্রাকৃতিক মেহেদি।" },
+            { id: 3, name: "ডিজিটাল ইলেকট্রিক তাসবিহ", price: 180, oldPrice: 250, image: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=400&q=80", desc: "সুন্দর ডিজাইনের ডিসপ্লে সহ ডিজিটাল ফিঙ্গার তাসবিহ কাউন্টার।" }
+        ];
+
+        // Storage Handlers
+        let siteInfo = JSON.parse(localStorage.getItem('gausia_site_info')) || defaultSiteInfo;
+        let products = JSON.parse(localStorage.getItem('gausia_products')) || defaultProducts;
+        let orders = JSON.parse(localStorage.getItem('gausia_orders')) || [];
+
+        // Real-time synchronization across devices / tabs
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'gausia_orders') {
+                orders = JSON.parse(e.newValue) || [];
+                renderOrders();
+            }
+            if (e.key === 'gausia_products') {
+                products = JSON.parse(e.newValue) || defaultProducts;
+                renderProducts();
+            }
+            if (e.key === 'gausia_site_info') {
+                siteInfo = JSON.parse(e.newValue) || defaultSiteInfo;
+                renderSiteInfo();
+            }
+        });
+
+        function applyThemeColors() {
+            document.documentElement.style.setProperty('--theme-dark', siteInfo.themeDark || '#1f2226');
+            document.documentElement.style.setProperty('--accent-gold', siteInfo.accentGold || '#c5a059');
+            document.documentElement.style.setProperty('--bg-main', siteInfo.bgMain || '#f2f3f5');
+        }
+
+        function renderSiteInfo() {
+            applyThemeColors();
+
+            document.getElementById('displayShopName').textContent = siteInfo.shopName;
+            document.getElementById('footerShopName').textContent = siteInfo.shopName;
+            document.getElementById('displayShopTagline').textContent = siteInfo.shopTagline;
+            document.getElementById('displayTopNotice').textContent = siteInfo.topNotice;
+            document.getElementById('displayProprietor').textContent = siteInfo.proprietor;
+            document.getElementById('displayPhone').textContent = siteInfo.phone;
+            document.getElementById('displayAddress').textContent = siteInfo.address;
+            document.getElementById('footerAddress').textContent = `${siteInfo.shopName} — ${siteInfo.address}`;
+            document.getElementById('modalPayNumber').textContent = siteInfo.phone;
+
+            if(siteInfo.logoUrl) {
+                document.getElementById('displayLogo').src = siteInfo.logoUrl;
+            }
+
+            document.getElementById('displayFbLink').href = siteInfo.fbLink || '#';
+            document.getElementById('displayTiktokLink').href = siteInfo.tiktokLink || '#';
+            document.getElementById('displayWaLink').href = `https://wa.me/88${siteInfo.phone.replace(/[^0-9]/g, '')}`;
+            document.getElementById('phoneLink').href = `tel:${siteInfo.phone}`;
+
+            // Admin Site Info Form
+            document.getElementById('editShopName').value = siteInfo.shopName;
+            document.getElementById('editShopTagline').value = siteInfo.shopTagline || '';
+            document.getElementById('editLogoUrl').value = siteInfo.logoUrl || '';
+            document.getElementById('editTopNotice').value = siteInfo.topNotice;
+            document.getElementById('editProprietor').value = siteInfo.proprietor;
+            document.getElementById('editPhone').value = siteInfo.phone;
+            document.getElementById('editAddress').value = siteInfo.address;
+            document.getElementById('editFbLink').value = siteInfo.fbLink || '';
+            document.getElementById('editTiktokLink').value = siteInfo.tiktokLink || '';
+            document.getElementById('editAdminPass').value = siteInfo.adminPass || '1234';
+            document.getElementById('themeDarkColor').value = siteInfo.themeDark || '#1f2226';
+            document.getElementById('accentGoldColor').value = siteInfo.accentGold || '#c5a059';
+            document.getElementById('bgMainColor').value = siteInfo.bgMain || '#f2f3f5';
+        }
+
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            const adminList = document.getElementById('adminProductList');
+            grid.innerHTML = '';
+            adminList.innerHTML = '';
+
+            products.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <img src="${p.image}" class="product-img" alt="${p.name}" onerror="this.src='https://via.placeholder.com/300?text=No+Image'">
+                    <div class="product-details">
+                        <div class="product-title">${p.name}</div>
+                        <div class="product-desc">${p.desc || ''}</div>
+                        <div class="price-box">
+                            <span class="current-price">৳${p.price}</span>
+                            ${p.oldPrice ? `<span class="old-price">৳${p.oldPrice}</span>` : ''}
+                        </div>
+                        <button class="order-btn" onclick="openOrderModal('${p.name.replace(/'/g, "\\'")}', ${p.price})">
+                            <i class="fas fa-shopping-cart"></i> অর্ডার করুন
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+
+                const adminItem = document.createElement('div');
+                adminItem.className = 'admin-product-item';
+                adminItem.innerHTML = `
+                    <span><strong>${p.name}</strong> (৳${p.price})</span>
+                    <div style="display:flex; gap:6px;">
+                        <button onclick="editProduct(${p.id})" style="background:#ffc107; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;"><i class="fas fa-edit"></i> এডিট</button>
+                        <button onclick="deleteProduct(${p.id})" style="background:#dc3545; color:white; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;"><i class="fas fa-trash"></i> ডিলিট</button>
+                    </div>
+                `;
+                adminList.appendChild(adminItem);
+            });
+        }
+
+        function renderOrders() {
+            orders = JSON.parse(localStorage.getItem('gausia_orders')) || [];
+            const ordersList = document.getElementById('adminOrdersList');
+            document.getElementById('orderCountBadge').textContent = orders.length;
+            ordersList.innerHTML = '';
+
+            if (orders.length === 0) {
+                ordersList.innerHTML = '<p style="text-align:center; color:#777; padding:15px;">এখনো কোনো অর্ডার আসেনি।</p>';
+                return;
+            }
+
+            orders.slice().reverse().forEach((ord) => {
+                const item = document.createElement('div');
+                item.className = 'order-card-item';
+                let statusClass = 'status-pending';
+                if (ord.status === 'সম্পন্ন') statusClass = 'status-completed';
+                if (ord.status === 'বাতিল') statusClass = 'status-cancelled';
+
+                item.innerHTML = `
+                    <div class="order-card-header">
+                        <span>আইডি: #${ord.id} (${ord.date})</span>
+                        <span class="status-badge ${statusClass}">${ord.status || 'পেন্ডিং'}</span>
+                    </div>
+                    <div><strong>পণ্য:</strong> ${ord.productName} (৳${ord.price})</div>
+                    <div><strong>কাস্টমার:</strong> ${ord.name}</div>
+                    <div><strong>মোবাইল:</strong> ${ord.phone}</div>
+                    <div><strong>ঠিকানা:</strong> ${ord.address}</div>
+                    <div><strong>পেমেন্ট:</strong> ${ord.payMethod} ${ord.trx ? `(TrxID: ${ord.trx})` : ''}</div>
+                    
+                    <div style="margin-top:8px; display:flex; gap:6px; flex-wrap:wrap;">
+                        <button onclick="changeOrderStatus(${ord.id}, 'সম্পন্ন')" style="background:#28a745; color:white; border:none; padding:3px 8px; border-radius:3px; cursor:pointer; font-size:11px;">সম্পন্ন</button>
+                        <button onclick="changeOrderStatus(${ord.id}, 'বাতিল')" style="background:#ffc107; color:#000; border:none; padding:3px 8px; border-radius:3px; cursor:pointer; font-size:11px;">বাতিল</button>
+                        <button onclick="deleteOrder(${ord.id})" style="background:#dc3545; color:white; border:none; padding:3px 8px; border-radius:3px; cursor:pointer; font-size:11px;">ডিলিট</button>
+                    </div>
+                `;
+                ordersList.appendChild(item);
+            });
+        }
+
+        // Preview File Image Upload
+        function previewProductImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('pImgBase64').value = e.target.result;
+                    document.getElementById('imgPreviewContainer').innerHTML = `<img src="${e.target.result}">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function previewLogoImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('editLogoUrl').value = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Order Modal Functions
+        function openOrderModal(pName, pPrice) {
+            document.getElementById('modalProductName').value = pName;
+            document.getElementById('modalProductPrice').value = pPrice;
+            document.getElementById('displayModalPName').textContent = pName;
+            document.getElementById('displayModalPPrice').textContent = pPrice;
+            document.getElementById('orderModal').style.display = 'flex';
+        }
+
+        function closeOrderModal() {
+            document.getElementById('orderModal').style.display = 'none';
+        }
+
+        function togglePaymentInstructions() {
+            const method = document.getElementById('paymentMethod').value;
+            const details = document.getElementById('paymentDetails');
+            details.style.display = method === 'bKash/Nagad' ? 'block' : 'none';
+        }
+
+        // Submit Order to Local Database
+        function submitOrder(e) {
+            e.preventDefault();
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const address = document.getElementById('custAddress').value.trim();
+            const pName = document.getElementById('modalProductName').value;
+            const pPrice = document.getElementById('modalProductPrice').value;
+            const payMethod = document.getElementById('paymentMethod').value;
+            const trx = document.getElementById('custTrx').value.trim();
+
+            const newOrder = {
+                id: Date.now(),
+                date: new Date().toLocaleDateString('bn-BD') + ' ' + new Date().toLocaleTimeString('bn-BD', {hour: '2-digit', minute:'2-digit'}),
+                productName: pName,
+                price: pPrice,
+                name: name,
+                phone: phone,
+                address: address,
+                payMethod: payMethod,
+                trx: trx,
+                status: 'পেন্ডিং'
+            };
+
+            orders.push(newOrder);
+            localStorage.setItem('gausia_orders', JSON.stringify(orders));
+            renderOrders();
+
+            closeOrderModal();
+            document.getElementById('orderForm').reset();
+            
+            showToast("আপনার অর্ডারটি সফলভাবে জমা নেওয়া হয়েছে!");
+        }
+
+        function submitOrderWhatsApp() {
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const address = document.getElementById('custAddress').value.trim();
+            const pName = document.getElementById('modalProductName').value;
+            const pPrice = document.getElementById('modalProductPrice').value;
+            const payMethod = document.getElementById('paymentMethod').value;
+            const trx = document.getElementById('custTrx').value.trim();
+
+            if (!name || !phone || !address) {
+                alert("অনুগ্রহ করে আপনার নাম, মোবাইল নম্বর এবং ঠিকানা লিখুন!");
+                return;
+            }
+
+            let msg = `*— নতুন অর্ডার —*\n\n`;
+            msg += `📦 *পণ্য:* ${pName}\n`;
+            msg += `💰 *মূল্য:* ৳${pPrice}\n\n`;
+            msg += `👤 *নাম:* ${name}\n`;
+            msg += `📞 *ফোন:* ${phone}\n`;
+            msg += `📍 *ঠিকানা:* ${address}\n`;
+            msg += `💳 *পেমেন্ট:* ${payMethod}\n`;
+            if(payMethod === 'bKash/Nagad' && trx) {
+                msg += `🔢 *TrxID:* ${trx}\n`;
+            }
+
+            const waNumber = siteInfo.phone.replace(/[^0-9]/g, '');
+            const waUrl = `https://wa.me/88${waNumber}?text=${encodeURIComponent(msg)}`;
+            window.open(waUrl, '_blank');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+
+        // Admin Management & Security
+        function openAdminModal() {
+            document.getElementById('adminPassInput').value = '';
+            document.getElementById('adminLoginModal').style.display = 'flex';
+        }
+
+        function closeAdminLoginModal() {
+            document.getElementById('adminLoginModal').style.display = 'none';
+        }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const inputPass = document.getElementById('adminPassInput').value;
+            if(inputPass === (siteInfo.adminPass || "1234")) {
+                closeAdminLoginModal();
+                document.getElementById('adminPanel').style.display = 'block';
+                renderOrders();
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            } else {
+                alert("ভুল পাসওয়ার্ড! আবার চেষ্টা করুন।");
+            }
+        }
+
+        function closeAdminPanel() {
+            document.getElementById('adminPanel').style.display = 'none';
+        }
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        function changeOrderStatus(orderId, newStatus) {
+            const ord = orders.find(o => o.id === orderId);
+            if (ord) {
+                ord.status = newStatus;
+                localStorage.setItem('gausia_orders', JSON.stringify(orders));
+                renderOrders();
+            }
+        }
+
+        function deleteOrder(orderId) {
+            if (confirm("আপনি কি এই অর্ডারটি ডিলিট করতে চান?")) {
+                orders = orders.filter(o => o.id !== orderId);
+                localStorage.setItem('gausia_orders', JSON.stringify(orders));
+                renderOrders();
+            }
+        }
+
+        function clearAllOrders() {
+            if (confirm("আপনি কি সব অর্ডার মুছে ফেলতে চান?")) {
+                orders = [];
+                localStorage.setItem('gausia_orders', JSON.stringify(orders));
+                renderOrders();
+            }
+        }
+
+        function handleSaveProduct(e) {
+            e.preventDefault();
+            const id = document.getElementById('editProductId').value;
+            const name = document.getElementById('pName').value;
+            
+            // Image handling (Local File or URL)
+            let image = document.getElementById('pImgBase64').value || document.getElementById('pImgUrl').value;
+            if (!image) {
+                image = "https://via.placeholder.com/300?text=No+Image";
+            }
+
+            const price = parseFloat(document.getElementById('pPrice').value);
+            const oldPrice = parseFloat(document.getElementById('pOldPrice').value) || null;
+            const desc = document.getElementById('pDesc').value;
+
+            if(id) {
+                const index = products.findIndex(p => p.id == id);
+                if(index !== -1) {
+                    products[index] = { id: parseInt(id), name, image, price, oldPrice, desc };
+                }
+            } else {
+                const newId = products.length ? Math.max(...products.map(p => p.id)) + 1 : 1;
+                products.push({ id: newId, name, image, price, oldPrice, desc });
+            }
+
+            localStorage.setItem('gausia_products', JSON.stringify(products));
+            renderProducts();
+            resetProductForm();
+            alert("পণ্য সফলভাবে সংরক্ষণ করা হয়েছে!");
+        }
+
+        function editProduct(id) {
+            const p = products.find(item => item.id === id);
+            if(p) {
+                document.getElementById('editProductId').value = p.id;
+                document.getElementById('pName').value = p.name;
+                document.getElementById('pImgUrl').value = p.image.startsWith('data:') ? '' : p.image;
+                document.getElementById('pImgBase64').value = p.image.startsWith('data:') ? p.image : '';
+                document.getElementById('imgPreviewContainer').innerHTML = `<img src="${p.image}">`;
+                document.getElementById('pPrice').value = p.price;
+                document.getElementById('pOldPrice').value = p.oldPrice || '';
+                document.getElementById('pDesc').value = p.desc || '';
+                document.getElementById('formTitleText').textContent = "পণ্য এডিট করুন:";
+                document.getElementById('cancelEditBtn').style.display = 'block';
+            }
+        }
+
+        function deleteProduct(id) {
+            if(confirm("আপনি কি নিশ্চিতভাবে এই পণ্যটি ডিলিট করতে চান?")) {
+                products = products.filter(p => p.id !== id);
+                localStorage.setItem('gausia_products', JSON.stringify(products));
+                renderProducts();
+            }
+        }
+
+        function resetProductForm() {
+            document.getElementById('addProductForm').reset();
+            document.getElementById('editProductId').value = '';
+            document.getElementById('pImgBase64').value = '';
+            document.getElementById('imgPreviewContainer').innerHTML = '<span style="font-size:11px; color:#aaa;">ছবি প্রিভিউ</span>';
+            document.getElementById('formTitleText').textContent = "নতুন পণ্য যোগ করুন:";
+            document.getElementById('cancelEditBtn').style.display = 'none';
+        }
+
+        function handleSaveTheme(e) {
+            e.preventDefault();
+            siteInfo.shopName = document.getElementById('editShopName').value;
+            siteInfo.shopTagline = document.getElementById('editShopTagline').value;
+            siteInfo.logoUrl = document.getElementById('editLogoUrl').value;
+            siteInfo.topNotice = document.getElementById('editTopNotice').value;
+            siteInfo.proprietor = document.getElementById('editProprietor').value;
+            siteInfo.phone = document.getElementById('editPhone').value;
+            siteInfo.address = document.getElementById('editAddress').value;
+            siteInfo.fbLink = document.getElementById('editFbLink').value;
+            siteInfo.tiktokLink = document.getElementById('editTiktokLink').value;
+
+            // Save Admin Password
+            const newPass = document.getElementById('editAdminPass').value.trim();
+            if(newPass) {
+                siteInfo.adminPass = newPass;
+            }
+
+            // Save Theme Colors
+            siteInfo.themeDark = document.getElementById('themeDarkColor').value;
+            siteInfo.accentGold = document.getElementById('accentGoldColor').value;
+            siteInfo.bgMain = document.getElementById('bgMainColor').value;
+
+            localStorage.setItem('gausia_site_info', JSON.stringify(siteInfo));
+            renderSiteInfo();
+            alert("সাইটের তথ্য, থিম ও পাসওয়ার্ড সফলভাবে আপডেট হয়েছে!");
+        }
+
+        // Initialize App
+        renderSiteInfo();
+        renderProducts();
+        renderOrders();
+    </script>
+</body>
+</html>
